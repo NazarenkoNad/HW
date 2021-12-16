@@ -15,7 +15,7 @@ public class HomeWork2 {
         //  int c = 10;
         checkNumbers(15);
 
-        repeatString("Hello, world", 5);
+        repeatString("Hello, world", 3);
 
         int x = -100;
 
