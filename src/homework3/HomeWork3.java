@@ -34,7 +34,14 @@ public class HomeWork3 {
         // цикла(-ов) заполнить его диагональные элементы единицами (можно только одну из диагоналей, если обе сложно).
         // Определить элементы одной из диагоналей можно по следующему принципу: индексы таких элементов равны,
         // то есть [0][0], [1][1], [2][2], …, [n][n];
+        int[][] arr = new int[4][4];
+        fillDiagonal(arr);
 
+        //5. Написать метод, принимающий на вход два аргумента: len и initialValue, и возвращающий одномерный массив
+        // типа int длиной len, каждая ячейка которого равна initialValue;
+        //  int[] arrFive = new int;
+        int[] arrFive = createArray(5, 3);
+        System.out.println("Созданный массив " + Arrays.toString(arrFive));
 
         //6 Задать одномерный массив. Написать методы поиска в нём минимального и максимального элемента;
         int[] ar2 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
@@ -43,22 +50,24 @@ public class HomeWork3 {
         System.out.println("Максимальный элемент: " + searchMax(ar2));
     }
 
- /*   public static void fillDiagonal(int[][] arr) {
-        int[][] arr = new int[4][4];
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                if (i = j) {System.out.print(arr[i][j] = 0);
-                }
-
-                else{
-                    System.out.print(arr[i][j] = 0);
-                }
-            }
-           //     if i != j System.out.print(("vfccbd"" + arr[i][j] = 1); }
-            }
+    public static int[] createArray(int len, int initialValue) {
+        int[] arrFive = new int [len];
+        Arrays.fill(arrFive, initialValue);
+        //  for (int i = 0; i < arrFive.length; i++) {
+        //      arrFive [i] = initialValue;
+        //     System.out.print(arrFive[i]);
+        return arrFive;
     }
-    /*
-  */
+
+    public static void fillDiagonal(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i][i] = 1;
+            arr[i][arr.length - i - 1] = 1;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(Arrays.toString(arr[i]));
+        }
+    }
 
     public static int searchMax(int[] ar2) {
         int max = ar2[0];
