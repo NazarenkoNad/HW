@@ -1,3 +1,9 @@
+/**
+ * Java 1. Homework #5
+ *
+ * @author Nazarenko Nadezhda
+ * @version 22.12.2021
+ */
 package homework5;
 
 class Employee {
