@@ -28,7 +28,7 @@ class Employee {
         this.phone = phone;
     }
     //3. Внутри класса «Сотрудник» написать методы, которые возвращают значение каждого поля;
-    String getName() {
+    /*String getName() {
         return name;
     }
 
@@ -63,5 +63,21 @@ class Employee {
     String getAllInfo() {
         return this.surname + " " + this.name + " " +this.secondName + " " +this.getAge() + " "+ this.getSalary() + " "+
              this.getPosition() + " " + this.getEmail() + " "+ this.getPhone();
+    }*/
+    public int getAge(){
+        return age;
+    }
+
+    @Override
+    public String toString() {
+        return (name +
+                "\n| Name: " + name +
+                "\n| Surname: " + surname +
+                "\n| SecondName: " + secondName +
+                "\n| Position: " + position +
+                "\n| Email: " + email +
+                "\n| Phone: " + phone +
+                "\n| Salary: " + salary +
+                "\n| Age: " + age);
     }
 }

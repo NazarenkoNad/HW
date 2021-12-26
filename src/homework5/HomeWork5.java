@@ -26,11 +26,17 @@ public class HomeWork5 {
                         "accountant", "medved.o@mail.ru", "65345997")
         };
 
-        System.out.println("--------------------------------------------------------");
+       /* System.out.println("--------------------------------------------------------");
 
-        for (int i = 0; i < employees.length; i++)
-            if (employees[i].getAge() > 40)
+        for (int i=0; i< employees.length; i++)
+            if (employees[i].getAge() >40)
                 System.out.println(employees[i].getAllInfo());
+        */
 
+        for (Employee employee : employees) {
+            if (employee.getAge() > 40) {
+                System.out.println(employee);
+            }
+        }
     }
 }
